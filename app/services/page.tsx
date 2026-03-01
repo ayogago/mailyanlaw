@@ -3,14 +3,14 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Immigration Legal Services - Asylum, Deportation Defense, Visas | Mailyan Law",
-  description: "Comprehensive immigration legal services in Glendale, CA. Expert representation for asylum, deportation defense, family petitions, naturalization, U-Visa, and more. Call 1-747-200-5520.",
+  title: "Immigration & Personal Injury Legal Services | Mailyan Law",
+  description: "Comprehensive immigration and personal injury legal services in Glendale, CA. Expert representation for asylum, deportation defense, family petitions, naturalization, U-Visa, car accidents, slip and fall, and wrongful death. Call 1-747-200-5520.",
   alternates: {
     canonical: "https://www.mailyanlaw.com/services",
   },
   openGraph: {
-    title: "Immigration Legal Services - Asylum, Deportation Defense, Visas | Mailyan Law",
-    description: "Comprehensive immigration legal services including asylum, deportation defense, family petitions, naturalization, and U-Visa assistance.",
+    title: "Immigration & Personal Injury Legal Services | Mailyan Law",
+    description: "Comprehensive immigration and personal injury legal services including asylum, deportation defense, family petitions, naturalization, U-Visa, car accidents, and wrongful death.",
     url: "https://www.mailyanlaw.com/services",
     siteName: "Mailyan Law",
     images: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/images/logo-navy-white.jpg",
         width: 1200,
         height: 630,
-        alt: "Mailyan Law - Immigration Legal Services",
+        alt: "Mailyan Law - Immigration & Personal Injury Legal Services",
       },
     ],
     locale: "en_US",
@@ -140,17 +140,29 @@ export default function Services() {
           }}></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Immigration Services</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Legal Services</h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive legal solutions tailored to your immigration needs
+            Comprehensive legal solutions in immigration and personal injury law
           </p>
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Immigration Services */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto space-y-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center gap-4 mb-12">
+              <div className="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white">
+                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900">Immigration Law</h2>
+                <p className="text-gray-600 mt-1">Comprehensive immigration legal services</p>
+              </div>
+            </div>
+            <div className="space-y-16">
             {services.map((service, index) => (
               <div
                 key={service.name}
@@ -237,6 +249,214 @@ export default function Services() {
                 </div>
               </div>
             ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Personal Injury Services */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center gap-4 mb-12">
+              <div className="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white">
+                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                </svg>
+              </div>
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900">Personal Injury</h2>
+                <p className="text-gray-600 mt-1">Fighting for your rights and fair compensation</p>
+              </div>
+            </div>
+
+            <div className="mb-12">
+              <p className="text-gray-700 text-lg leading-relaxed max-w-4xl">
+                At Mailyan Law, we understand that suffering a personal injury can be a life-changing event. Whether you&apos;ve been injured in a car accident, slip and fall, or any other incident caused by someone else&apos;s negligence, you deserve experienced legal representation to protect your rights and secure the compensation you need.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-slate-800">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">Motor Vehicle Accidents</h3>
+                    <p className="text-primary font-semibold text-sm mt-1">Car, Truck & Motorcycle Accidents</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  If you&apos;ve been injured in a motor vehicle accident, we can help you navigate the claims process and fight for the compensation you deserve for medical bills, lost wages, and pain and suffering.
+                </p>
+                <div className="bg-white p-4 rounded-xl border border-gray-100">
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Car and truck accidents</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Motorcycle accidents</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Rideshare accidents</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Pedestrian accidents</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-slate-800">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">Slip and Fall</h3>
+                    <p className="text-primary font-semibold text-sm mt-1">Premises Liability</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Property owners have a duty to maintain safe premises. If you&apos;ve been injured due to hazardous conditions on someone else&apos;s property, we can help you hold the responsible parties accountable.
+                </p>
+                <div className="bg-white p-4 rounded-xl border border-gray-100">
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Wet floor injuries</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Uneven surfaces and broken stairs</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Inadequate lighting or security</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Store and commercial property injuries</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-slate-800">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">Dog Bites</h3>
+                    <p className="text-primary font-semibold text-sm mt-1">Animal Attack Claims</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  California has strict liability laws for dog bites. If you or a loved one has been bitten or attacked by a dog, we can help you recover compensation for your injuries.
+                </p>
+                <div className="bg-white p-4 rounded-xl border border-gray-100">
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Dog bite injuries</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Animal attack scarring</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Medical expenses and rehabilitation</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-slate-800">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">Wrongful Death</h3>
+                    <p className="text-primary font-semibold text-sm mt-1">Representing Grieving Families</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Losing a loved one due to someone else&apos;s negligence is devastating. We help families seek justice and compensation during these difficult times with compassion and dedication.
+                </p>
+                <div className="bg-white p-4 rounded-xl border border-gray-100">
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Fatal accident claims</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Loss of income and support</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-gray-700">Funeral and burial expenses</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/personal-injury"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-800 to-slate-900 text-white px-10 py-4 rounded-xl font-bold text-lg hover:from-slate-900 hover:to-slate-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                Learn More About Personal Injury
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -248,7 +468,7 @@ export default function Services() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Process</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                A proven, step-by-step approach to achieving successful immigration outcomes
+                A proven, step-by-step approach to achieving successful legal outcomes
               </p>
             </div>
 
@@ -273,7 +493,7 @@ export default function Services() {
                         <h3 className="text-2xl font-bold text-gray-900">Initial Consultation</h3>
                       </div>
                       <p className="text-gray-600 leading-relaxed">
-                        We begin with a comprehensive consultation to understand your unique situation, immigration goals, and concerns. This allows us to provide an honest assessment of your case and determine the best path forward.
+                        We begin with a comprehensive consultation to understand your unique situation, goals, and concerns. This allows us to provide an honest assessment of your case and determine the best path forward.
                       </p>
                     </div>
                   </div>
@@ -297,7 +517,7 @@ export default function Services() {
                         <h3 className="text-2xl font-bold text-gray-900">Strategy Development</h3>
                       </div>
                       <p className="text-gray-600 leading-relaxed">
-                        We develop a customized legal strategy tailored specifically to your case and immigration objectives. Our experienced team ensures every detail is carefully planned to maximize your chances of success.
+                        We develop a customized legal strategy tailored specifically to your case and objectives. Our experienced team ensures every detail is carefully planned to maximize your chances of success.
                       </p>
                     </div>
                   </div>
@@ -321,7 +541,7 @@ export default function Services() {
                         <h3 className="text-2xl font-bold text-gray-900">Expert Representation</h3>
                       </div>
                       <p className="text-gray-600 leading-relaxed">
-                        We provide comprehensive legal representation throughout the entire immigration process. From filing petitions to court appearances, we keep you informed and prepared at every step of the way.
+                        We provide comprehensive legal representation throughout the entire process. From filing petitions to court appearances, we keep you informed and prepared at every step of the way.
                       </p>
                     </div>
                   </div>
@@ -345,7 +565,7 @@ export default function Services() {
                         <h3 className="text-2xl font-bold text-gray-900">Ongoing Support</h3>
                       </div>
                       <p className="text-gray-600 leading-relaxed">
-                        Our commitment doesn't end when your case is resolved. We provide continued support for your ongoing immigration needs and future endeavors, ensuring long-term success and peace of mind.
+                        Our commitment doesn&apos;t end when your case is resolved. We provide continued support for your ongoing legal needs and future endeavors, ensuring long-term success and peace of mind.
                       </p>
                     </div>
                   </div>
@@ -360,10 +580,10 @@ export default function Services() {
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Start Your Immigration Journey?
+            Ready to Get Started?
           </h2>
           <p className="text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
-            Contact us today for a consultation. Our experienced immigration attorneys are here to help you navigate the complex immigration process.
+            Contact us today for a consultation. Our experienced attorneys are here to help you with your immigration or personal injury case.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

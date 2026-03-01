@@ -3,14 +3,14 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Meline Mailyan - Immigration Attorney | Mailyan Law",
-  description: "Meet Meline Mailyan, an experienced immigration attorney in Glendale, CA. UCLA graduate, UC Davis Law alum, and member of AILA with 12+ years of experience helping clients achieve their American dream.",
+  title: "About Meline Mailyan - Immigration & Personal Injury Attorney | Mailyan Law",
+  description: "Meet Meline Mailyan, an experienced immigration and personal injury attorney in Glendale, CA. UCLA graduate, UC Davis Law alum, and member of AILA with 12+ years of experience helping clients with immigration and personal injury cases.",
   alternates: {
     canonical: "https://www.mailyanlaw.com/about",
   },
   openGraph: {
-    title: "About Meline Mailyan - Immigration Attorney | Mailyan Law",
-    description: "Meet Meline Mailyan, an experienced immigration attorney in Glendale, CA. UCLA graduate, UC Davis Law alum, and member of AILA with 12+ years of experience.",
+    title: "About Meline Mailyan - Immigration & Personal Injury Attorney | Mailyan Law",
+    description: "Meet Meline Mailyan, an experienced immigration and personal injury attorney in Glendale, CA. UCLA graduate, UC Davis Law alum, and member of AILA with 12+ years of experience.",
     url: "https://www.mailyanlaw.com/about",
     siteName: "Mailyan Law",
     images: [
@@ -48,7 +48,7 @@ export default function About() {
     },
     {
       title: "Excellence",
-      description: "We strive for excellence in every aspect of our legal services, staying current with immigration law changes and providing top-tier representation.",
+      description: "We strive for excellence in every aspect of our legal services, staying current with changes in immigration and personal injury law and providing top-tier representation.",
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -75,7 +75,7 @@ export default function About() {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">About Mailyan Law</h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Your trusted partner in navigating the complex U.S. immigration system
+            Your trusted partner in immigration and personal injury law
           </p>
         </div>
       </section>
@@ -97,7 +97,7 @@ export default function About() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl max-w-xs">
-                  <p className="text-sm font-semibold mb-1">Licensed Immigration Attorney</p>
+                  <p className="text-sm font-semibold mb-1">Licensed Attorney</p>
                   <p className="text-xs text-gray-200">California State Bar</p>
                 </div>
               </div>
@@ -110,7 +110,7 @@ export default function About() {
 
                 <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
                   <p>
-                    Meline Mailyan is a dedicated immigration attorney with a proven track record of success in helping individuals and families achieve their American dream. With extensive experience in immigration law, Meline has successfully represented clients in complex immigration matters before U.S. immigration courts and agencies.
+                    Meline Mailyan is a dedicated attorney with a proven track record of success in helping individuals and families navigate complex legal matters. With extensive experience in both immigration and personal injury law, Meline has successfully represented clients in immigration courts, government agencies, and personal injury claims throughout California.
                   </p>
                   <p>
                     Meline earned her Bachelor's degree in Political Science and Russian Language from the University of California, Los Angeles (UCLA) and received her Juris Doctor from the University of California, Davis School of Law (King Hall), where she was inducted into the Order of Barristers for excellence in advocacy and oral argument.
@@ -122,10 +122,13 @@ export default function About() {
                     As a proud member of the American Immigration Lawyers Association (AILA), Meline stays at the forefront of immigration law developments and maintains the highest standards of professional practice in representing clients before immigration agencies and courts.
                   </p>
                   <p>
-                    At Mailyan Law, we understand that immigration issues affect not just individuals, but entire families. We take a compassionate, client-centered approach to every case, ensuring that each client receives personalized attention and a tailored legal strategy.
+                    At Mailyan Law, we understand that legal issues - whether immigration or personal injury - affect not just individuals, but entire families. We take a compassionate, client-centered approach to every case, ensuring that each client receives personalized attention and a tailored legal strategy.
                   </p>
                   <p>
-                    Our firm is built on the principles of integrity, dedication, and excellence in legal representation. We are committed to fighting for your rights and helping you achieve your immigration goals.
+                    In addition to immigration law, Meline represents personal injury clients who have been injured due to the negligence of others, including motor vehicle accidents, slip and fall incidents, dog bites, and wrongful death cases. She is committed to fighting for maximum compensation and justice for injury victims.
+                  </p>
+                  <p>
+                    Our firm is built on the principles of integrity, dedication, and excellence in legal representation. We are committed to fighting for your rights and helping you achieve your legal goals.
                   </p>
                 </div>
 
@@ -228,7 +231,7 @@ export default function About() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">How We Work</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Our proven approach to achieving successful immigration outcomes
+                Our proven approach to achieving successful legal outcomes
               </p>
             </div>
 
@@ -292,9 +295,9 @@ export default function About() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Immigration Journey?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
-            Contact us today for a consultation. Let's discuss how we can help you achieve your immigration goals.
+            Contact us today for a consultation. Let&apos;s discuss how we can help you with your immigration or personal injury case.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

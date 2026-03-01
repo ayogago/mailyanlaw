@@ -71,7 +71,7 @@ export default function Contact() {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Mailyan Law</h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Let's discuss your immigration needs. Schedule a consultation today.
+            Let&apos;s discuss your legal needs. Schedule a consultation today.
           </p>
         </div>
       </section>
@@ -230,7 +230,7 @@ export default function Contact() {
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-800 focus:border-slate-800 transition-all text-gray-900"
-                        placeholder="Please describe your immigration needs in detail..."
+                        placeholder="Please describe your legal needs in detail..."
                       />
                     </div>
 
@@ -283,9 +283,9 @@ export default function Contact() {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Meline Mailyan</h3>
-                    <p className="text-primary font-semibold mb-3">Immigration Attorney</p>
+                    <p className="text-primary font-semibold mb-3">Immigration & Personal Injury Attorney</p>
                     <p className="text-gray-600 text-sm">
-                      Dedicated to helping individuals and families navigate the complex U.S. immigration system.
+                      Dedicated to helping individuals and families with immigration and personal injury matters.
                     </p>
                   </div>
                 </div>
@@ -315,7 +315,7 @@ export default function Contact() {
                     </svg>
                     <div>
                       <h4 className="font-bold text-gray-900 mb-2">Need Immediate Help?</h4>
-                      <p className="text-sm text-gray-700 mb-3">For urgent immigration matters, please call us directly during business hours.</p>
+                      <p className="text-sm text-gray-700 mb-3">For urgent legal matters, please call us directly during business hours.</p>
                       <a href="tel:1-747-200-5520" className="text-blue-600 font-bold hover:text-blue-700">
                         1-747-200-5520
                       </a>

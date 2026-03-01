@@ -146,7 +146,7 @@ export async function POST(request: Request) {
       naturalization: 'Naturalization',
       'u-visa': 'U-Visa',
       'personal-injury': 'Personal Injury',
-      other: 'Other Immigration Matter',
+      other: 'Other Legal Matter',
     };
 
     const serviceName = serviceNames[subject] || subject;
@@ -228,7 +228,7 @@ export async function POST(request: Request) {
               <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 20px;">
                 <tr>
                   <td style="padding: 15px; background-color: #eff6ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
-                    <p style="margin: 0 0 5px 0; color: #1e40af; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Immigration Service Requested</p>
+                    <p style="margin: 0 0 5px 0; color: #1e40af; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Legal Service Requested</p>
                     <p style="margin: 0; color: #1e293b; font-size: 18px; font-weight: 700;">${serviceName}</p>
                   </td>
                 </tr>
@@ -373,7 +373,7 @@ export async function POST(request: Request) {
           <tr>
             <td style="background-color: #011e40; padding: 30px; text-align: center;">
               <p style="margin: 0 0 10px 0; color: #cbd5e1; font-size: 14px; font-weight: 600;">
-                Mailyan Law - Immigration Attorney Services
+                Mailyan Law - Immigration & Personal Injury Attorney
               </p>
               <p style="margin: 0 0 15px 0; color: #94a3b8; font-size: 13px;">
                 801 N Brand Blvd Suite 665, Glendale, CA 91203
