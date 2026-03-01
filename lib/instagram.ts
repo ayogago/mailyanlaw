@@ -1,7 +1,5 @@
-// Instagram API integration
-
-const INSTAGRAM_ACCESS_TOKEN = process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN;
-const INSTAGRAM_USER_ID = process.env.NEXT_PUBLIC_INSTAGRAM_USER_ID;
+// Instagram API integration (server-side only)
+// Access token is kept server-side for security - never exposed to the client
 
 export interface InstagramReel {
   id: string;
@@ -13,13 +11,13 @@ export interface InstagramReel {
   formattedDate: string;
 }
 
-// Helper function to format date
 function formatDate(dateString: string): string {
   const date = new Date(dateString);
   const now = new Date();
   const diffTime = Math.abs(now.getTime() - date.getTime());
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
+  if (diffDays === 0) return 'Today';
   if (diffDays === 1) return '1 day ago';
   if (diffDays < 7) return `${diffDays} days ago`;
   if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
@@ -27,22 +25,24 @@ function formatDate(dateString: string): string {
   return `${Math.floor(diffDays / 365)} years ago`;
 }
 
-// Fetch Instagram Reels
+// Fetch Instagram Reels via Graph API
 export async function fetchInstagramReels(): Promise<InstagramReel[]> {
-  if (!INSTAGRAM_ACCESS_TOKEN || !INSTAGRAM_USER_ID) {
-    console.error('Instagram credentials are not set');
+  const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
+
+  if (!accessToken) {
+    console.error('[Instagram] Missing INSTAGRAM_ACCESS_TOKEN environment variable');
     return [];
   }
 
   try {
-    // Fetch user's media
+    const fields = 'id,caption,media_type,media_url,thumbnail_url,permalink,timestamp';
     const response = await fetch(
-      `https://graph.instagram.com/${INSTAGRAM_USER_ID}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${INSTAGRAM_ACCESS_TOKEN}`,
-      { next: { revalidate: 3600 } } // Cache for 1 hour
+      `https://graph.instagram.com/me/media?fields=${fields}&limit=50&access_token=${accessToken}`,
+      { next: { revalidate: 3600 } }
     );
 
     if (!response.ok) {
-      console.error('Instagram API error:', response.statusText);
+      console.error('[Instagram] API error:', response.status, response.statusText);
       return [];
     }
 
@@ -50,14 +50,13 @@ export async function fetchInstagramReels(): Promise<InstagramReel[]> {
 
     if (!data.data) return [];
 
-    // Filter only reels and map to our format
     const reels: InstagramReel[] = data.data
-      .filter((item: any) => item.media_type === 'VIDEO' || item.media_type === 'REELS')
-      .map((item: any) => ({
+      .filter((item: { media_type: string }) => item.media_type === 'VIDEO')
+      .map((item: { id: string; caption?: string; thumbnail_url?: string; media_url?: string; permalink: string; timestamp: string }) => ({
         id: item.id,
-        caption: item.caption || 'No caption',
-        thumbnail: item.thumbnail_url || item.media_url,
-        mediaUrl: item.media_url,
+        caption: item.caption || 'Immigration Law Tips',
+        thumbnail: item.thumbnail_url || item.media_url || '',
+        mediaUrl: item.media_url || '',
         permalink: item.permalink,
         timestamp: item.timestamp,
         formattedDate: formatDate(item.timestamp),
@@ -65,7 +64,7 @@ export async function fetchInstagramReels(): Promise<InstagramReel[]> {
 
     return reels;
   } catch (error) {
-    console.error('Error fetching Instagram reels:', error);
+    console.error('[Instagram] Error fetching reels:', error);
     return [];
   }
 }
