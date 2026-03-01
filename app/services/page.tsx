@@ -583,7 +583,7 @@ export default function Services() {
             Ready to Get Started?
           </h2>
           <p className="text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
-            Contact us today for a consultation. Our experienced attorneys are here to help you with your immigration or personal injury case.
+            Contact us today for a consultation. Our experienced team is here to help you with your immigration or personal injury case.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
