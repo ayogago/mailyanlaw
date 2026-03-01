@@ -96,36 +96,60 @@ export default function PersonalInjury() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">Areas of Practice</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">🚗</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Motor Vehicle Accidents</h3>
-                <p className="text-gray-600">
+              <div className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-slate-800">
+                <div className="mb-6 flex justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center text-gray-900">Motor Vehicle Accidents</h3>
+                <p className="text-gray-600 text-center">
                   Car, truck, motorcycle, and other vehicle accident claims.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">🏢</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Slip and Fall</h3>
-                <p className="text-gray-600">
-                  Premises liability claims for injuries on another's property.
+              <div className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-slate-800">
+                <div className="mb-6 flex justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center text-gray-900">Slip and Fall</h3>
+                <p className="text-gray-600 text-center">
+                  Premises liability claims for injuries on another&apos;s property.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">🐕</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Dog Bites</h3>
-                <p className="text-gray-600">
+              <div className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-slate-800">
+                <div className="mb-6 flex justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center text-gray-900">Dog Bites</h3>
+                <p className="text-gray-600 text-center">
                   Claims for injuries caused by animal attacks.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">⚖️</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Wrongful Death</h3>
-                <p className="text-gray-600">
+              <div className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-slate-800">
+                <div className="mb-6 flex justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center text-gray-900">Wrongful Death</h3>
+                <p className="text-gray-600 text-center">
                   Representing families who have lost loved ones due to negligence.
                 </p>
               </div>

@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Mailyan Law</h3>
             <p className="text-gray-400 mb-4">
-              Expert immigration attorney services with personalized attention to your case.
+              Expert immigration and personal injury attorney services with personalized attention to your case.
             </p>
             <p className="text-gray-400">
               <strong>Attorney:</strong> Meline Mailyan

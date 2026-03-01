@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mailyanlaw.com"),
-  title: "Mailyan Law - Immigration Attorney Services",
-  description: "Expert immigration law services including asylum, deportation defense, family petitions, naturalization, U-Visa, and H-1B Visa assistance.",
+  title: "Mailyan Law - Immigration & Personal Injury Attorney",
+  description: "Expert legal services in immigration and personal injury law. Asylum, deportation defense, family petitions, naturalization, U-Visa, car accidents, slip and fall, and wrongful death representation.",
   alternates: {
     canonical: "https://www.mailyanlaw.com",
   },
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Mailyan Law - Immigration Attorney Services",
-    description: "Expert immigration law services including asylum, deportation defense, family petitions, naturalization, U-Visa, and H-1B Visa assistance.",
+    title: "Mailyan Law - Immigration & Personal Injury Attorney",
+    description: "Expert legal services in immigration and personal injury law. Asylum, deportation defense, family petitions, naturalization, U-Visa, car accidents, slip and fall, and wrongful death representation.",
     url: "https://www.mailyanlaw.com",
     siteName: "Mailyan Law",
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: "/images/logo-navy-white.jpg",
         width: 1200,
         height: 630,
-        alt: "Mailyan Law - Immigration Attorney",
+        alt: "Mailyan Law - Immigration & Personal Injury Attorney",
       },
     ],
     locale: "en_US",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mailyan Law - Immigration Attorney Services",
-    description: "Expert immigration law services including asylum, deportation defense, family petitions, naturalization, U-Visa, and H-1B Visa assistance.",
+    title: "Mailyan Law - Immigration & Personal Injury Attorney",
+    description: "Expert legal services in immigration and personal injury law. Asylum, deportation defense, family petitions, naturalization, U-Visa, car accidents, slip and fall, and wrongful death representation.",
     images: ["/images/logo-navy-white.jpg"],
   },
 };
@@ -61,7 +61,7 @@ export default function RootLayout({
     "url": "https://www.mailyanlaw.com",
     "logo": "https://www.mailyanlaw.com/images/logo-navy-white.jpg",
     "image": "https://www.mailyanlaw.com/images/logo-navy-white.jpg",
-    "description": "Expert immigration law services including asylum, deportation defense, family petitions, naturalization, U-Visa, and H-1B Visa assistance.",
+    "description": "Expert legal services in immigration and personal injury law, including asylum, deportation defense, family petitions, naturalization, U-Visa, car accidents, slip and fall, and wrongful death.",
     "telephone": "+1-747-200-5520",
     "email": "info@mailyanlaw.com",
     "address": {
@@ -92,7 +92,7 @@ export default function RootLayout({
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Immigration Legal Services",
+      "name": "Legal Services",
       "itemListElement": [
         {
           "@type": "Offer",
@@ -133,6 +133,14 @@ export default function RootLayout({
             "name": "U-Visa",
             "description": "Immigration relief for victims of qualifying crimes"
           }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Personal Injury",
+            "description": "Legal representation for motor vehicle accidents, slip and fall, dog bites, and wrongful death"
+          }
         }
       ]
     }
@@ -142,7 +150,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Attorney",
     "name": "Meline Mailyan",
-    "jobTitle": "Immigration Attorney",
+    "jobTitle": "Immigration & Personal Injury Attorney",
     "worksFor": {
       "@id": "https://www.mailyanlaw.com/#organization"
     },

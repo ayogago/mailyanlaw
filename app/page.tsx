@@ -99,6 +99,45 @@ export default function Home() {
     },
   ];
 
+  const piServices = [
+    {
+      name: "Motor Vehicle Accidents",
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+      description: "Car, truck, motorcycle, and other vehicle accident claims"
+    },
+    {
+      name: "Slip and Fall",
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
+      description: "Premises liability claims for injuries on another's property"
+    },
+    {
+      name: "Dog Bites",
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+      ),
+      description: "Claims for injuries caused by animal attacks"
+    },
+    {
+      name: "Wrongful Death",
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      ),
+      description: "Representing families who have lost loved ones due to negligence"
+    },
+  ];
+
   return (
     <div>
       {/* Hero Section */}
@@ -120,17 +159,17 @@ export default function Home() {
             <div className="order-2 lg:order-1 text-center lg:text-left">
               <div className="inline-block mb-4">
                 <span className="bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold tracking-wide border border-white/20">
-                  TRUSTED IMMIGRATION LAW FIRM
+                  TRUSTED IMMIGRATION & PERSONAL INJURY LAW FIRM
                 </span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white leading-tight">
                 Mailyan Law
               </h1>
               <p className="text-2xl md:text-3xl mb-3 text-gray-200 font-light">
-                Expert Immigration Attorney Services
+                Immigration & Personal Injury Attorney
               </p>
               <p className="text-lg md:text-xl mb-8 text-gray-300">
-                Meline Mailyan - Your Trusted Immigration Partner
+                Meline Mailyan - Your Trusted Legal Partner
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
@@ -180,48 +219,102 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Practice Areas Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Immigration Services</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Practice Areas</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Comprehensive legal solutions tailored to your unique immigration needs
+                Comprehensive legal solutions in immigration and personal injury law
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service) => (
-                <div
-                  key={service.name}
-                  className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-slate-800"
-                >
-                  <div className="mb-6 flex justify-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
-                      {service.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-center text-gray-900 group-hover:text-slate-800 transition-colors">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-600 text-center leading-relaxed">
-                    {service.description}
-                  </p>
+            {/* Immigration Services */}
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
-              ))}
+                <h3 className="text-3xl font-bold text-gray-900">Immigration Law</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service) => (
+                  <div
+                    key={service.name}
+                    className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-slate-800"
+                  >
+                    <div className="mb-6 flex justify-center">
+                      <div className="w-20 h-20 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                        {service.icon}
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-center text-gray-900 group-hover:text-slate-800 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-600 text-center leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="text-center mt-16">
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-800 to-slate-900 text-white px-10 py-4 rounded-xl font-bold text-lg hover:from-slate-900 hover:to-slate-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                View All Services
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
+            {/* Personal Injury Services */}
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900">Personal Injury</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {piServices.map((service) => (
+                  <div
+                    key={service.name}
+                    className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-slate-800"
+                  >
+                    <div className="mb-6 flex justify-center">
+                      <div className="w-20 h-20 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                        {service.icon}
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold mb-4 text-center text-gray-900 group-hover:text-slate-800 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-600 text-center leading-relaxed text-sm">
+                      {service.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-800 to-slate-900 text-white px-10 py-4 rounded-xl font-bold text-lg hover:from-slate-900 hover:to-slate-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  View All Services
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/personal-injury"
+                  className="inline-flex items-center gap-2 border-2 border-slate-800 text-slate-800 px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-800 hover:text-white transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  Personal Injury
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -234,7 +327,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Need Legal Assistance?</h2>
               <p className="text-xl text-gray-600">
-                Contact us today for a consultation with our experienced immigration attorney
+                Contact us today for a consultation with our experienced attorney
               </p>
             </div>
 
@@ -369,7 +462,7 @@ export default function Home() {
                       value={formData.message}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-800 focus:border-slate-800 transition-all text-gray-900"
-                      placeholder="Tell us about your immigration needs..."
+                      placeholder="Tell us about your legal needs..."
                     />
                   </div>
 
@@ -404,7 +497,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Choose Mailyan Law?</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Dedicated to providing exceptional immigration legal services with integrity and professionalism
+                Dedicated to providing exceptional legal services with integrity and professionalism
               </p>
             </div>
 
@@ -419,7 +512,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Expert Legal Counsel</h3>
                 <p className="text-gray-600 text-center leading-relaxed">
-                  Extensive experience in immigration law with a proven track record of successfully navigating complex cases and achieving favorable outcomes
+                  Extensive experience in immigration and personal injury law with a proven track record of successfully navigating complex cases and achieving favorable outcomes
                 </p>
               </div>
 
@@ -433,7 +526,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Personalized Service</h3>
                 <p className="text-gray-600 text-center leading-relaxed">
-                  Every case receives individualized attention with customized legal strategies tailored to your unique circumstances and immigration goals
+                  Every case receives individualized attention with customized legal strategies tailored to your unique circumstances and goals
                 </p>
               </div>
 
@@ -447,7 +540,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Client-Centered Approach</h3>
                 <p className="text-gray-600 text-center leading-relaxed">
-                  Your objectives and concerns remain our highest priority, ensuring transparent communication and dedicated support throughout your entire immigration journey
+                  Your objectives and concerns remain our highest priority, ensuring transparent communication and dedicated support throughout your entire legal journey
                 </p>
               </div>
             </div>
