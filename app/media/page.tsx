@@ -7,27 +7,10 @@ interface InstagramReel {
   id: string;
   caption?: string;
   media_type: string;
+  media_url?: string;
+  thumbnail_url?: string;
   permalink: string;
   timestamp: string;
-}
-
-function extractShortcode(permalink: string): string | null {
-  const match = permalink.match(/\/(reel|p)\/([A-Za-z0-9_-]+)/);
-  return match ? match[2] : null;
-}
-
-function formatDate(dateString: string): string {
-  const date = new Date(dateString);
-  const now = new Date();
-  const diffMs = now.getTime() - date.getTime();
-  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-
-  if (diffDays === 0) return "Today";
-  if (diffDays === 1) return "1 day ago";
-  if (diffDays < 7) return `${diffDays} days ago`;
-  if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
-  if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
-  return `${Math.floor(diffDays / 365)} years ago`;
 }
 
 export default function Media() {
@@ -151,9 +134,9 @@ export default function Media() {
                 {Array.from({ length: 6 }).map((_, i) => (
                   <div
                     key={i}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-200 animate-pulse"
+                    className="bg-black rounded-2xl shadow-lg overflow-hidden animate-pulse"
                   >
-                    <div className="w-full bg-gray-200" style={{ height: 700 }} />
+                    <div className="w-full bg-gray-800" style={{ aspectRatio: '9/16' }} />
                   </div>
                 ))}
               </div>
@@ -185,35 +168,20 @@ export default function Media() {
             {!loading && !error && reels.length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {reels.map((reel) => {
-                  const shortcode = extractShortcode(reel.permalink);
-                  if (!shortcode) return null;
+                  if (!reel.media_url) return null;
                   return (
                     <div
                       key={reel.id}
-                      className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-200"
+                      className="bg-black rounded-2xl shadow-lg overflow-hidden"
                     >
-                      <iframe
-                        src={`https://www.instagram.com/reel/${shortcode}/embed`}
-                        width="100%"
-                        height="700"
-                        frameBorder="0"
-                        scrolling="no"
-                        allowTransparency={true}
-                        className="w-full"
+                      <video
+                        src={reel.media_url}
+                        poster={reel.thumbnail_url}
+                        controls
+                        playsInline
+                        preload="metadata"
+                        className="w-full h-auto"
                       />
-                      {reel.timestamp && (
-                        <div className="px-4 py-3 border-t border-gray-100 flex items-center justify-between">
-                          <span className="text-sm text-gray-500">{formatDate(reel.timestamp)}</span>
-                          <a
-                            href={reel.permalink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm text-purple-600 hover:text-purple-800 font-medium"
-                          >
-                            View on Instagram
-                          </a>
-                        </div>
-                      )}
                     </div>
                   );
                 })}
