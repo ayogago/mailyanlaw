@@ -159,7 +159,7 @@ export default function Home() {
             <div className="order-2 lg:order-1 text-center lg:text-left">
               <div className="inline-block mb-4">
                 <span className="bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold tracking-wide border border-white/20">
-                  TRUSTED IMMIGRATION & PERSONAL INJURY LAW FIRM
+                  TRUSTED LEGAL PARTNER
                 </span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white leading-tight">
@@ -168,9 +168,8 @@ export default function Home() {
               <p className="text-2xl md:text-3xl mb-3 text-gray-200 font-light">
                 Immigration & Personal Injury Attorney
               </p>
-              <p className="text-lg md:text-xl mb-8 text-gray-300">
-                Meline Mailyan - Your Trusted Legal Partner
-              </p>
+              <div className="mb-8">
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
                   href="/contact"
