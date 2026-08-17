@@ -93,6 +93,11 @@ export default function Contact() {
                   801 N Brand Blvd Suite 665<br />
                   Glendale, CA 91203
                 </p>
+                <p className="text-sm font-semibold text-white mt-6 mb-1">Mailing Address</p>
+                <p className="text-gray-200 leading-relaxed">
+                  1250 W Glenoaks. Blvd. Suite E-411<br />
+                  Glendale, CA 91201
+                </p>
               </div>
 
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">

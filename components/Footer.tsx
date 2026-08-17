@@ -28,6 +28,13 @@ export default function Footer() {
                 Glendale, CA 91203
               </p>
               <p>
+                <strong className="text-white">Mailing Address:</strong>
+                <br />
+                1250 W Glenoaks. Blvd. Suite E-411
+                <br />
+                Glendale, CA 91201
+              </p>
+              <p>
                 <strong className="text-white">Phone:</strong>{" "}
                 <a href="tel:1-747-200-5520" className="hover:text-blue-400">
                   1-747-200-5520
